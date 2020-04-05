@@ -9,23 +9,23 @@ server.use(cors());
 const users = [
     {
         "id": "39160451-056c-425a-bf48-e9238c88d2a2",
-        "name": "danielle",
-        "bio": "beautiful"
+        "name": "Elliot Baker",
+        "bio": "Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat."
     },
     {
         "id": "9374ec7e-fd75-4d35-b7c1-b66e909bd07f",
-        "name": "fabricio",
-        "bio": "ugly"
+        "name": "Rick Sanchez",
+        "bio": "Rick is a genius scientist whose alcoholism and reckless, nihilistic behavior are a source of concern for his family."
     },
     {
         "id": "826d861c-426f-4bf8-812b-d0e7b1efcc3c",
-        "name": "Hendrix silva",
-        "bio": "lazy"
+        "name": "Jenny Hess",
+        "bio": "Jenny is a student studying Media Management at the New School."
     },
     {
         "id": "a67d0724-840f-41f4-a470-24d871cd30a0",
-        "name": "buckley",
-        "bio": "crazy"
+        "name": "Amy",
+        "bio": "Amy is a violinist with 2 years experience in the wedding industry. She enjoys the outdoors and currently resides in upstate New York."
     }
 ];
 

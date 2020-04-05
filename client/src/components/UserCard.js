@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card } from 'semantic-ui-react';
+// context
+import { UserContext } from '../context/UserContext';
 
 const UserCard = ({ user }) => {
+    const { setUserToEdit } = useContext(UserContext);
     const { name, bio } = user;
+
     return (
-        <Card>
+        <Card onClick={() => setUserToEdit(user)}>
             <Card.Content>
                 <Card.Header>{name}</Card.Header>
                 <Card.Description>

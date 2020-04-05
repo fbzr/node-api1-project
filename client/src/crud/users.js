@@ -16,7 +16,7 @@ export const removeUser = async userId => {
     return await axios.delete(`http://localhost:5000/api/users/${userId}`);
 }
 
-export const editUser = async ({ id, name, bio }) => {
+export const updateUser = async ({ id, name, bio }) => {
     return await axios.put(`http://localhost:5000/api/users/${id}`, { name, bio });
 }
 
@@ -25,5 +25,5 @@ export default {
     addUser,
     getUserById,
     removeUser,
-    editUser
+    updateUser
 }
