@@ -1,8 +1,10 @@
 const express = require('express');
 const uuid = require('uuid');
+const cors = require('cors');
 
 const server = express();
 server.use(express.json());
+server.use(cors());
 
 const users = [];
 
