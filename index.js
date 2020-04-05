@@ -6,7 +6,28 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 
-const users = [];
+const users = [
+    {
+        "id": "39160451-056c-425a-bf48-e9238c88d2a2",
+        "name": "danielle",
+        "bio": "beautiful"
+    },
+    {
+        "id": "9374ec7e-fd75-4d35-b7c1-b66e909bd07f",
+        "name": "fabricio",
+        "bio": "ugly"
+    },
+    {
+        "id": "826d861c-426f-4bf8-812b-d0e7b1efcc3c",
+        "name": "Hendrix silva",
+        "bio": "lazy"
+    },
+    {
+        "id": "a67d0724-840f-41f4-a470-24d871cd30a0",
+        "name": "buckley",
+        "bio": "crazy"
+    }
+];
 
 server.get('/', (req, res) => {
     res.json({ msg: 'success' });
