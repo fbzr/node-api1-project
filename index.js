@@ -67,8 +67,29 @@ server.delete('/api/users/:id', (req, res) => {
 
 // updates the user with the specified id using data from the req.body
 // returns the modified user
-server.put('/api/user/:id', (req, res) => {
+server.put('/api/users/:id', (req, res) => {
+    try {
+        const index = users.findIndex(user => user.id === req.params.id);
+        if (index === -1) {
+            res.status(404).json({ message: "The user with the specified ID does not exist." });
+        }
 
+        const { name, bio } = req.body;
+
+        if(!name || !bio) {
+            res.status(400).json({ errorMessage: "Please provide name and bio for the user." });
+        }
+
+        users[index] = {
+            ...users[index],
+            name,
+            bio
+        }
+
+        res.json(users[index]);
+    } catch(err) {
+        res.status(500).json({ errorMessage: "The user information could not be modified." });
+    }
 });
 
 const PORT = process.env.PORT || 5000;
