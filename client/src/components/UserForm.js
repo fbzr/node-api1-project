@@ -68,7 +68,6 @@ const UserForm = () => {
             <Button icon onClick={handleDelete}>
                 <Icon name='trash alternate' />
             </Button>}
-            <pre>{JSON.stringify(user, null, 2)}</pre>
         </Form>
     )
 }
